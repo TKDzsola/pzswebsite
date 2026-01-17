@@ -10,16 +10,21 @@
         <meta name="author" content="Pásztor Zsolt" />
         <meta name="robots" content="index, follow" />
 
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://pasztorzsolt.hu/">
+        <meta property="og:title" content="Pásztor Zsolt | Fejlesztés & Taekwondo">
+        <meta property="og:description" content="Több mint kód. Ez mentalitás. Egyedi szoftverek és weboldalak fejlesztése.">
+        <meta property="og:image" content="assets/img/profile.jpg">
+
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         
         <link href="css/styles.css" rel="stylesheet" />
-        
-        <script src="js/szolgaltatasokinfo.js"></script>
     </head>
-    <body id="page-top" onload="mindenszolgaltatasinfoelrejtese()">
+    <body id="page-top">
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm" id="mainNav">
             <div class="container">
@@ -56,30 +61,44 @@
                 </div>
                 
                 <div class="row text-center g-4">
-                    <div class="col-md-4" onclick="reszponzivweboldalinfomegjelenitese()">
-                        <div class="card h-100 bg-body-tertiary border-0 shadow hover-card p-4 rounded-4" id="ResponsiveWebDevDivId">
+                    <div class="col-md-4">
+                        <div class="card h-100 bg-body-tertiary border-0 shadow hover-card p-4 rounded-4 service-trigger" 
+                             role="button" 
+                             tabindex="0"
+                             data-target="reszponzivweboldalid">
                             <div class="card-body">
                                 <i class="fas fa-laptop-code fa-4x text-secondary mb-3"></i>
                                 <h4 class="card-title fw-bold">Webfejlesztés</h4>
                                 <p class="card-text text-muted">Prémium weboldalak, amik nem csak szépek, de eladnak. Reszponzív, gyors, modern.</p>
+                                <div class="mt-3 text-gold small text-uppercase fw-bold">Részletek <i class="fas fa-chevron-down ms-1"></i></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" onclick="desktopappinfomegjelenitese()">
-                        <div class="card h-100 bg-body-tertiary border-0 shadow hover-card p-4 rounded-4" id="DesktopAppDevDivId">
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 bg-body-tertiary border-0 shadow hover-card p-4 rounded-4 service-trigger" 
+                             role="button" 
+                             tabindex="0"
+                             data-target="desktopappid">
                             <div class="card-body">
                                 <i class="fas fa-microchip fa-4x text-secondary mb-3"></i>
                                 <h4 class="card-title fw-bold">Egyedi Szoftverek</h4>
                                 <p class="card-text text-muted">Automatizáld a cégedet. Egyedi Windows alkalmazások a maximális hatékonyságért.</p>
+                                <div class="mt-3 text-gold small text-uppercase fw-bold">Részletek <i class="fas fa-chevron-down ms-1"></i></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" onclick="informatikaioktatasinfomegjelenitese()">
-                        <div class="card h-100 bg-body-tertiary border-0 shadow hover-card p-4 rounded-4" id="ItTeachDivId">
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 bg-body-tertiary border-0 shadow hover-card p-4 rounded-4 service-trigger" 
+                             role="button" 
+                             tabindex="0"
+                             data-target="informatikainfoid">
                             <div class="card-body">
                                 <i class="fas fa-user-graduate fa-4x text-secondary mb-3"></i>
                                 <h4 class="card-title fw-bold">Oktatás & Mentorálás</h4>
                                 <p class="card-text text-muted">Gyakorlatias tudás átadás. Programozás (C#) és digitális kompetencia fejlesztés.</p>
+                                <div class="mt-3 text-gold small text-uppercase fw-bold">Részletek <i class="fas fa-chevron-down ms-1"></i></div>
                             </div>
                         </div>
                     </div>
@@ -88,7 +107,7 @@
                 <div class="row mt-5">
                     <div class="col-lg-12">
                         
-                        <div id="reszponzivweboldalid" class="card bg-dark border-gold text-white p-5 rounded-4 shadow-lg animate-fade-in">
+                        <div id="reszponzivweboldalid" class="service-details card bg-dark border-gold text-white p-5 rounded-4 shadow-lg animate-fade-in d-none">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <h3 class="text-gold mb-3">Reszponzív Weboldalak</h3>
@@ -105,21 +124,23 @@
                             </div>
                         </div>
 
-                        <div id="desktopappid" class="card bg-dark border-gold text-white p-5 rounded-4 shadow-lg animate-fade-in">
+                        <div id="desktopappid" class="service-details card bg-dark border-gold text-white p-5 rounded-4 shadow-lg animate-fade-in d-none">
                             <h3 class="text-gold mb-3">Asztali Alkalmazások</h3>
                             <p class="lead">Ne pazarolj időt Excel táblákra. Építek neked egy rendszert, ami dolgozik helyetted.</p>
                             <ul class="list-unstyled mt-3">
                                 <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Raktárkezelő rendszerek</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Ügyfélnyilvántartók (CRM)</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> .NET / C# / WPF technológiák</li>
                             </ul>
                         </div>
 
-                        <div id="informatikainfoid" class="card bg-dark border-gold text-white p-5 rounded-4 shadow-lg animate-fade-in">
+                        <div id="informatikainfoid" class="service-details card bg-dark border-gold text-white p-5 rounded-4 shadow-lg animate-fade-in d-none">
                             <h3 class="text-gold mb-3">IT Oktatás & Karrier</h3>
                             <p class="lead">A tudás az egyetlen befektetés, ami mindig megtérül.</p>
                             <ul class="list-unstyled mt-3">
                                 <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> C# / .NET fejlesztés alapoktól</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Mentorálás pályaváltóknak</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Objektumorientált szemlélet (OOP)</li>
                             </ul>
                         </div>
 
@@ -209,7 +230,7 @@
                                 <h4>A Fordulópont</h4>
                                 <h4 class="subheading text-gold">Küzdelem és Újrakezdés</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">A stroke utáni rehabilitáció megtanított a valódi kitartásra.</p></div>
+                            <div class="timeline-body"><p class="text-muted">A stroke utáni rehabilitáció megtanított a valódi kitartásra és az ARNI módszer erejére.</p></div>
                         </div>
                     </li>
                     <li>
@@ -221,7 +242,7 @@
                                 <h4>Jelen</h4>
                                 <h4 class="subheading text-gold">IT Szakember & Taekwondo Szakedző</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Ma már mindkét szenvedélyemnek élek.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Ma már mindkét szenvedélyemnek élek: fejlesztem a jövő szoftvereit és edzem a jövő harcosait.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
@@ -239,12 +260,12 @@
                 <h3 class="section-subheading text-muted mb-5">Keress bizalommal!</h3>
                 
                 <div class="mb-5">
-                    <button class="btn btn-gold btn-xl shadow" onclick="zsolaelerhetosegmegjelenitese()">
+                    <button id="btn-contact-reveal" class="btn btn-gold btn-xl shadow">
                         Elérhetőségek megjelenítése
                     </button>
                 </div>
 
-                <div id="zsolaelerhetosegdivid" class="animate-fade-in" style="display:none;">
+                <div id="contact-details" class="animate-fade-in d-none">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
                             <div class="card bg-dark border-secondary rounded-4 p-5 shadow-lg">
@@ -255,7 +276,6 @@
                                     <hr class="border-secondary my-4">
                                     
                                     <div class="fs-5 d-flex flex-column gap-3">
-                                        
                                         <a href="mailto:info@pasztorzsolt.hu" class="text-decoration-none text-white hover-gold">
                                             <i class="fas fa-envelope text-gold me-2"></i> info@pasztorzsolt.hu
                                         </a>
@@ -264,10 +284,9 @@
                                             <i class="fas fa-phone text-gold me-2"></i> +36 30 123 4567
                                         </a>
 
-                                        <a href="https://www.google.com/maps/search/?api=1&query=Rákóczibánya" target="_blank" class="text-decoration-none text-white hover-gold">
+                                        <a href="https://maps.google.com/?q=Rákóczibánya" target="_blank" class="text-decoration-none text-white hover-gold">
                                             <i class="fas fa-map-marker-alt text-gold me-2"></i> Rákóczibánya
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
@@ -280,9 +299,10 @@
         <footer class="footer py-4 bg-dark border-top border-secondary">
             <div class="container">
                 <div class="row align-items-center text-muted">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Pásztor Zsolt 2026</div>
+                    <div class="col-lg-4 text-lg-start">Copyright © Pásztor Zsolt 2026</div>
                     <div class="col-lg-4 my-3 my-lg-0 text-center">
-                        <a class="btn btn-dark btn-social mx-2 border-secondary rounded-circle" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2 border-secondary rounded-circle" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2 border-secondary rounded-circle" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-secondary text-decoration-none" href="#!">Adatkezelés</a>
